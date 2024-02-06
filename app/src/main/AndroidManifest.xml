@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fitsSystemWindows="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cake_or_fake_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cake_or_fake_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CakeOrFake"
+        tools:targetApi="31">
+
+        <service
+            android:name=".tools.BackgroundSoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.game.StartGameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_start_game"
+            android:theme="@style/Theme.CakeOrFake" />
+        <activity
+            android:name=".ui.activity.home.HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.CakeOrFake">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CakeOrFake">
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
