@@ -73,4 +73,5 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.2.0-beta02")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.github.skydoves:cloudy:0.1.2")
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
 }

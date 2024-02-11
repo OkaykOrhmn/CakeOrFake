@@ -1,30 +1,77 @@
 {
     "data":{
-        "count": 4,
+        "count": 10,
         "games":[
             {
                 "id":0,
                 "level":1,
                 "image":"mash",
-                "cake": true
+                "cake": true,
+                "imageCake":"mash-cake"
             },
             {
                 "id":1,
                 "level":2,
                 "image":"shoe",
-                "cake": false
+                "cake": false,
+                "imageCake": null
             },
             {
                 "id":2,
                 "level":3,
                 "image":"chess",
-                "cake": true
+                "cake": true,
+                "imageCake":"chess-cake"
             }
             , {
                 "id":3,
                 "level":4,
                 "image":"lemo",
-                "cake": false
+                "cake": false,
+                "imageCake": null
+            },
+            {
+                "id":4,
+                "level":5,
+                "image":"bag",
+                "cake": false,
+                "imageCake":null
+            }
+        , {
+                "id":5,
+                "level":6,
+                "image":"cheeseburger",
+                "cake": true,
+                "imageCake": "cheeseburger_cake"
+            }
+        , {
+                "id":6,
+                "level":7,
+                "image":"hat",
+                "cake": true,
+                "imageCake": "hat_cake"
+            }
+        , {
+                "id":7,
+                "level":8,
+                "image":"apple",
+                "cake": false,
+                "imageCake": null
+            }
+        , {
+                "id":8,
+                "level":9,
+                "image":"plate",
+                "cake": false,
+                "imageCake": null
+            }
+
+        , {
+                "id":9,
+                "level":10,
+                "image":"towel",
+                "cake": true,
+                "imageCake": "towel_cake"
             }
         ]
     }

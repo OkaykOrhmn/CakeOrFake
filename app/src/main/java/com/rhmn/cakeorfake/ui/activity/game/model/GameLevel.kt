@@ -4,5 +4,6 @@ data class GameLevel(
     var id: Int = 0,
     var level: Int = 0,
     var cake: Boolean = true,
-    var image: String = "0"
+    var image: String = "0",
+//    var imageCake: String = "0"
 )

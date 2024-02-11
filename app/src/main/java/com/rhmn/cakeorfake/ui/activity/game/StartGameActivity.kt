@@ -162,7 +162,7 @@ fun Game(knife: Knife, win: Boolean, done: Boolean) {
         dialog = done
         if (sharedPrefHandler.getSoundVoice()) {
             if (dialog) {
-                var what :String
+                var what: String
 
                 what = if (levelData.cake) {
                     play(context, R.raw.cake)
