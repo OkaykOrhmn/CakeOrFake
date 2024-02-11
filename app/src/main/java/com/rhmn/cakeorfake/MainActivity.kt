@@ -83,10 +83,10 @@ fun GreetingView(text: String) {
     LaunchedEffect(Unit) {
         while (true) {
             val sharedPrefHandler = SharedPrefHandler(context)
-            if(sharedPrefHandler.isFirstTime()){
-                sharedPrefHandler.setGameList(createData(context))
-                sharedPrefHandler.itsFirstTime()
-            }
+//            if(sharedPrefHandler.isFirstTime()){
+            sharedPrefHandler.setGameList(createData(context))
+//                sharedPrefHandler.itsFirstTime()
+//            }
             delay(4500)
             goToActivity(context, HomeActivity::class.java)
             finishActivity(context)
