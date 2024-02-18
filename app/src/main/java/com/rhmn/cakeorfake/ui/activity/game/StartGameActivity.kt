@@ -94,9 +94,9 @@ class StartGameActivity : ComponentActivity(), Knife {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sharedPrefHandler = SharedPrefHandler(this)
-        if (sharedPrefHandler.getSoundVoice()) {
-            play(this, R.raw.realorfake)
-        }
+//        if (sharedPrefHandler.getSoundVoice()) {
+//            play(this, R.raw.realorfake)
+//        }
 
         setContent {
             setContent {
@@ -160,24 +160,31 @@ fun Game(knife: Knife, win: Boolean, done: Boolean) {
     LaunchedEffect(done) {
         delay(2000)
         dialog = done
-        if (sharedPrefHandler.getSoundVoice()) {
             if (dialog) {
                 var what: String
 
                 what = if (levelData.cake) {
-                    play(context, R.raw.cake)
                     "کیکه"
                 } else {
-                    play(context, R.raw.real)
                     "واگعیه"
 
 
+                }
+                if (sharedPrefHandler.getSoundVoice()) {
+
+                    if (win) {
+                        play(context, R.raw.win)
+
+                    } else {
+                        play(context, R.raw.lose)
+
+                    }
                 }
                 Toast.makeText(context, what, Toast.LENGTH_SHORT).show()
 
 
             }
-        }
+
 
 
     }
@@ -494,7 +501,7 @@ fun Game(knife: Knife, win: Boolean, done: Boolean) {
                                 .height(85.dp)
                         ) {
                             Image(
-                                painter = painterResource(id = R.drawable.sample),
+                                painter = painterResource(id = R.drawable.person),
                                 contentDescription = "image description",
                                 contentScale = ContentScale.FillBounds,
                                 modifier = Modifier
